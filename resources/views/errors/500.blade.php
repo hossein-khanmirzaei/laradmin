@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '服务器错误')
+@section('title', 'Server Error!')
 
 @section('content')
 <div class="error-page">

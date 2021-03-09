@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '仪表盘')
+@section('title', 'Dashboard')
 
 @section('content')
     @if (Auth::user()->is_super)
@@ -10,14 +10,14 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>菜单</h3>
+                        <h3>Menu</h3>
 
-                        <p>管理菜单、菜单项等</p>
+                        <p>Manage Menus, Menu Items, etc.</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-sitemap"></i>
                     </div>
-                    <a href="{{ route('menus.index') }}" class="small-box-footer">进入 <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('menus.index') }}" class="small-box-footer">Enter <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -25,14 +25,14 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>用户</h3>
+                        <h3>User</h3>
 
-                        <p>管理用户、角色、权限等</p>
+                        <p>Manage Users, Roles, Permissions, etc.</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <a href="{{ route('users.index') }}" class="small-box-footer">进入 <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('users.index') }}" class="small-box-footer">Enter <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -40,14 +40,14 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>系统</h3>
+                        <h3>System</h3>
 
-                        <p>管理日志、系统设置等</p>
+                        <p>Manage Logs, System Settings, etc.</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <a href="{{ route('settings.index') }}" class="small-box-footer">进入 <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('settings.index') }}" class="small-box-footer">Enter <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->

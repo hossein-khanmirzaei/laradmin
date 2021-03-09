@@ -14,7 +14,7 @@ class MenuitemPresenter extends Presenter
 
     public function isEnable()
     {
-        return $this->is_enable ? '是' : '否';
+        return $this->is_enable ? 'Yes' : 'No';
     }
 
     public function image()

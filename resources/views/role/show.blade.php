@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', __('Show') . __('role.module'))
+@section('title', __('Show') . ' ' . __('role.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('Show') . __('role.module') }}: {{ $item->getKey() }}</h3>
+                <h3 class="card-title">{{ __('Show') . ' ' . __('role.module') }}: {{ $item->getKey() }}</h3>
             </div>
 
             <div class="card-body">
-                
+
                 <div class="form-group row">
                     <label for="id" class="col-sm-3 col-form-label text-right">{{ __('role.id') }}</label>
                     <div class="col-sm-9">
@@ -46,7 +46,7 @@
                         <div class="form-control-plaintext">{{ $item->present()->byGroup }}</div>
                     </div>
                 </div>
-                
+
                 <div class="form-group row">
                     <label for="permission" class="col-sm-3 col-form-label text-right">{{ __('role.permission') }}</label>
                     <div class="col-sm-9">

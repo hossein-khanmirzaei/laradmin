@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
-@section('title', __('Edit') . __('menuitem.module'))
+@section('title', __('Edit') . ' ' . __('menuitem.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('Edit') . __('menuitem.module') }}: {{ $item->getKey() }}</h3>
+                <h3 class="card-title">{{ __('Edit') . ' ' . __('menuitem.module') }}: {{ $item->getKey() }}</h3>
             </div>
 
 		    <form role="form" id="edit-form" name="edit-form" method="post" action="{{ route('menuitems.update', $item) }}">
                 @csrf
                 @method('put')
                 <div class="card-body">
-                    
+
                     <div class="form-group row">
                         <label for="slug" class="col-sm-3 col-form-label text-right">{{ __('menuitem.slug') }}</label>
                         <div class="col-sm-9">
@@ -68,7 +68,7 @@
                         <div class="col-sm-9">
                             @inject('menuitems', 'App\Services\MenuitemService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-info @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-info">
-                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>无</option>
+                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>Nothing</option>
                                 @foreach ($menuitems->getLevel1Items() as $collection)
                                     <option value="{{ $collection->getKey() }}"{{ old('parent_id', $item->parent_id) === $collection->getKey() ? ' selected' : '' }}>{{ $collection->name }}</option>
                                 @endforeach
@@ -115,11 +115,11 @@
                         <div class="col-sm-9">
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable1" class="form-check-input @error('is_enable') is-invalid @enderror" value="1"{{ old('is_enable', $item->is_enable) == 1 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="is_enable1">是</label>
+                                <label class="form-check-label" for="is_enable1">Yes</label>
                             </div>
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable0" class="form-check-input @error('is_enable') is-invalid @enderror" value="0"{{ old('is_enable', $item->is_enable) == 0 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="is_enable0">否</label>
+                                <label class="form-check-label" for="is_enable0">No</label>
                             </div>
                             @error('is_enable')
                                 <div class="invalid-feedback" role="alert">

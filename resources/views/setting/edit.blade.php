@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
-@section('title', __('Edit') . __('setting.module'))
+@section('title', __('Edit') . ' ' . __('setting.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('Edit') . __('setting.module') }}: {{ $item->getKey() }}</h3>
+                <h3 class="card-title">{{ __('Edit') . ' ' . __('setting.module') }}: {{ $item->getKey() }}</h3>
             </div>
 
 		    <form role="form" id="edit-form" name="edit-form" method="post" action="{{ route('settings.update', $item) }}">
                 @csrf
                 @method('put')
                 <div class="card-body">
-                    
+
                     <div class="form-group row">
                         <label for="name" class="col-sm-3 col-form-label text-right">{{ __('setting.name') }}</label>
                         <div class="col-sm-9">

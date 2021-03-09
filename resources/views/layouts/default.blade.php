@@ -12,8 +12,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', '默认页面') | {{ config('setting.name', 'Laravel') }}</title>
-    
+    <title>@yield('title', 'Default Page') | {{ config('setting.name', 'Laravel') }}</title>
+
     <!-- App Script -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 

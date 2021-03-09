@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '页面未找到')
+@section('title', 'Page not found!')
 
 @section('content')
 <div class="error-page">

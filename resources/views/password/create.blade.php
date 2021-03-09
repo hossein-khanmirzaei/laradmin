@@ -7,7 +7,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">修改密码</h3>
+                <h3 class="card-title">Change Password</h3>
             </div>
 
 		    <form role="form" id="create-form" name="create-form" method="post" action="{{ route('passwords.store') }}">
@@ -33,7 +33,7 @@
 		                            <strong>{{ $message }}</strong>
 		                        </div>
 	                        @enderror
-	                        <small class="form-text text-muted">密码至少8位</small>
+	                        <small class="form-text text-muted">Password at least 8 digits</small>
 	                    </div>
 	                </div>
 	                <div class="form-group row">
@@ -52,7 +52,7 @@
                 <div class="card-footer">
                     <div class="row justify-content-sm-center">
                         <button type="submit" class="btn btn-info">
-                            <i class="fas fa-save"></i> 确认修改
+                            <i class="fas fa-save"></i> Confirm Changes
                         </button>
                     </div>
                 </div>

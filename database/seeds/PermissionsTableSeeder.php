@@ -15,28 +15,28 @@ class PermissionsTableSeeder extends Seeder
         Permission::create([
             'slug' => 'home',
             'name' => 'Home',
-            'action' => 'home',
+            'action' => 'Home',
             'model' => 'navigation',
         ]);
 
         Permission::create([
             'slug' => 'contact',
             'name' => 'Contact',
-            'action' => 'contact',
+            'action' => 'Contact',
             'model' => 'navigation',
         ]);
 
         Permission::create([
             'slug' => 'log-index',
             'name' => 'Log Index',
-            'action' => 'index',
+            'action' => 'Log Index',
             'model' => 'log',
         ]);
 
         Permission::create([
             'slug' => 'log-show',
             'name' => 'Log Show',
-            'action' => 'show',
+            'action' => 'Show',
             'model' => 'log',
         ]);
 
@@ -52,7 +52,7 @@ class PermissionsTableSeeder extends Seeder
             foreach ($actions as $action) {
                 Permission::create([
                     'slug' => $module . '-' . $action,
-                    'name' => __($action) . __($module . '.module'),
+                    'name' => __($action) . ' ' . __($module . '.module'),
                     'action' => $action,
                     'model' => $module,
                 ]);
@@ -62,35 +62,35 @@ class PermissionsTableSeeder extends Seeder
         Permission::create([
             'slug' => 'password-change',
             'name' => 'Change Password',
-            'action' => 'changePassword',
+            'action' => 'Change Password',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'password-reset',
             'name' => 'Reset Password',
-            'action' => 'resetPassword',
+            'action' => 'Reset Password',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'group-assign',
             'name' => 'Group Assignment',
-            'action' => 'assignGroup',
+            'action' => 'Assign Group',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'role-assign',
             'name' => 'Role Assignment',
-            'action' => 'assignRole',
+            'action' => 'Assign Role',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'permission-assign',
             'name' => 'Permission Assignment',
-            'action' => 'assignPermission',
+            'action' => 'Assign Permission',
             'model' => 'role',
         ]);
     }

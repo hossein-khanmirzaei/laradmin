@@ -8,7 +8,7 @@ class RolePresenter extends Presenter
 {
     public function byGroup()
     {
-        return $this->by_group ? '是' : '否';
+        return $this->by_group ? 'Yes' : 'No';
     }
 
     public function allPermissions()

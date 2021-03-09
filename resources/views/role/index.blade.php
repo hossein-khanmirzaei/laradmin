@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', __('role.module') . __('List'))
+@section('title', __('role.module') . ' ' . __('List'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('role.module') . __('List') }}</h3>
+                <h3 class="card-title">{{ __('role.module') . ' ' . __('List') }}</h3>
                 <div class="card-tools">
                     @can('create', Role::class)
                         <a href="{{ route('roles.create') }}" title="{{ __('Create') }}" class="btn btn-success">
-                            <i class="fas fa-plus"></i> {{ __('Create') . __('role.module') }}
+                            <i class="fas fa-plus"></i> {{ __('Create') . ' ' . __('role.module') }}
                         </a>
                     @endcan
                 </div>

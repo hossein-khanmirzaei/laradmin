@@ -15,12 +15,12 @@ class CreatePermissionsTable extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->string('slug', 20)->unique()->comment('唯一标识');
-            $table->string('name', 20)->unique()->comment('名称');
-            $table->string('model', 50)->comment('模型');
-            $table->string('action', 50)->comment('动作');
-            $table->unsignedBigInteger('parent_id')->nullable()->comment('父权限ID');
-            $table->text('description')->nullable()->comment('描述');
+            $table->string('slug', 20)->unique();
+            $table->string('name', 30)->unique();
+            $table->string('model', 50);
+            $table->string('action', 50);
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

@@ -99,9 +99,9 @@
         'ordering': true,
         'info': true,
         'autoWidth': true,
-        'language': {
-            'url': "{{ asset('plugins/datatables/lang/Chinese.json') }}"
-        }
+        // 'language': {
+        //     'url': "{{ asset('plugins/datatables/lang/Chinese.json') }}"
+        // }
     });
 </script>
 @endpush

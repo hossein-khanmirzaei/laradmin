@@ -14,28 +14,28 @@ class PermissionsTableSeeder extends Seeder
     {
         Permission::create([
             'slug' => 'home',
-            'name' => '首页',
+            'name' => 'Home',
             'action' => 'home',
             'model' => 'navigation',
         ]);
 
         Permission::create([
             'slug' => 'contact',
-            'name' => '联系我们',
+            'name' => 'Contact',
             'action' => 'contact',
             'model' => 'navigation',
         ]);
 
         Permission::create([
             'slug' => 'log-index',
-            'name' => '列出日志',
+            'name' => 'Log Index',
             'action' => 'index',
             'model' => 'log',
         ]);
 
         Permission::create([
             'slug' => 'log-show',
-            'name' => '查看日志',
+            'name' => 'Log Show',
             'action' => 'show',
             'model' => 'log',
         ]);
@@ -61,35 +61,35 @@ class PermissionsTableSeeder extends Seeder
 
         Permission::create([
             'slug' => 'password-change',
-            'name' => '修改密码',
+            'name' => 'Change Password',
             'action' => 'changePassword',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'password-reset',
-            'name' => '重置密码',
+            'name' => 'Reset Password',
             'action' => 'resetPassword',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'group-assign',
-            'name' => '分配组',
+            'name' => 'Group Assignment',
             'action' => 'assignGroup',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'role-assign',
-            'name' => '分配角色',
+            'name' => 'Role Assignment',
             'action' => 'assignRole',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'permission-assign',
-            'name' => '分配权限',
+            'name' => 'Permission Assignment',
             'action' => 'assignPermission',
             'model' => 'role',
         ]);

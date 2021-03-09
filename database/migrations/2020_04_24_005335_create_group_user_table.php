@@ -17,13 +17,11 @@ class CreateGroupUserTable extends Migration
             $table->foreignId('group_id')
                 ->constrained()
                 ->onDelete('cascade')
-                ->onUpdate('cascade')
-                ->comment('组ID');
+                ->onUpdate('cascade');
             $table->foreignId('user_id')
                 ->constrained()
                 ->onDelete('cascade')
-                ->onUpdate('cascade')
-                ->comment('用户ID');
+                ->onUpdate('cascade');
 
             $table->index(['user_id', 'group_id']);
             $table->unique(['user_id', 'group_id']);

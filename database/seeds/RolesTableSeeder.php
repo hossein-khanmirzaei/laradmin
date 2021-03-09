@@ -15,14 +15,14 @@ class RolesTableSeeder extends Seeder
     {
         $role = Role::create([
             'slug' => 'admin',
-            'name' => '管理员',
+            'name' => 'Admin',
         ]);
 
         $role->permissions()->sync(Permission::all()->pluck('id')->toArray());
 
         Role::create([
             'slug' => 'user',
-            'name' => '普通用户',
+            'name' => 'User',
         ]);
     }
 }

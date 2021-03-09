@@ -17,13 +17,11 @@ class CreatePermissionRoleTable extends Migration
             $table->foreignId('permission_id')
                 ->constrained()
                 ->onDelete('cascade')
-                ->onUpdate('cascade')
-                ->comment('权限ID');
+                ->onUpdate('cascade');
             $table->foreignId('role_id')
                 ->constrained()
                 ->onDelete('cascade')
-                ->onUpdate('cascade')
-                ->comment('角色ID');
+                ->onUpdate('cascade');
 
             $table->index(['role_id', 'permission_id']);
             $table->unique(['role_id', 'permission_id']);

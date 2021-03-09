@@ -15,7 +15,7 @@ class SettingsTableSeeder extends Seeder
         Setting::create([
             'name' => 'maintenance',
             'value' => '0',
-            'description' => '系统维护开关，1-开启维护，关闭系统，0-关闭维护，开启系统',
+            'description' => 'System Maintenance，1-Maintenance Mode，0-Normal Mode',
         ]);
     }
 }

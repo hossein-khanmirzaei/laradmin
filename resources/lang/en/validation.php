@@ -117,6 +117,7 @@ return [
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
+    'captcha' => ':attribute incorrect',
 
     /*
     |--------------------------------------------------------------------------
@@ -146,6 +147,27 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'username' => 'Username',
+        'password' => 'Password',
+        'captcha' => 'Verification code',
+        'email' => 'E-mail',
+        'phone' => 'Phone',
+        'description' => 'Description',
+        'name' => 'Name',
+        'old_password' => 'Old password',
+        'password_confirmation' => 'Confirm password',
+        'value' => 'Value',
+        'slug' => 'Slug',
+        'parent_id' => 'Parent ID',
+        'model' => 'Model',
+        'action' => 'Action',
+        'by_group' => 'By Group',
+        'is_enable' => 'Enabled',
+        'route' => 'Rout',
+        'icon' => 'Icon',
+        'menu_id' => 'Menu ID',
+        'order' => 'Order',
+    ],
 
 ];

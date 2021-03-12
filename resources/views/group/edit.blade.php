@@ -44,7 +44,7 @@
                         <div class="col-sm-9">
                             @inject('groups', 'App\Services\GroupService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-info @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-info">
-                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>Nothing</option>
+                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>{{__('nothing')}}</option>
                                 @foreach ($groups->getAll() as $collection)
                                     <option value="{{ $collection->getKey() }}"{{ old('parent_id', $item->parent_id) === $collection->getKey() ? ' selected' : '' }}>{{ $collection->name }}</option>
                                 @endforeach

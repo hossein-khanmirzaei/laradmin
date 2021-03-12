@@ -7,11 +7,11 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <div class="card-title">Contact Us</div>
+                <div class="card-title">{{__('contactUS')}}</div>
             </div>
 
             <div class="card-body">
-                <p>Contact Us</p>
+                <p>{{__('contactUS')}}</p>
             </div>
         </div>
     </div>

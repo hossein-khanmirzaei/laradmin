@@ -15,28 +15,28 @@ class PermissionsTableSeeder extends Seeder
         Permission::create([
             'slug' => 'home',
             'name' => 'Home',
-            'action' => 'Home',
+            'action' => 'home',
             'model' => 'navigation',
         ]);
 
         Permission::create([
             'slug' => 'contact',
             'name' => 'Contact',
-            'action' => 'Contact',
+            'action' => 'contact',
             'model' => 'navigation',
         ]);
 
         Permission::create([
             'slug' => 'log-index',
             'name' => 'Log Index',
-            'action' => 'Log Index',
+            'action' => 'index',
             'model' => 'log',
         ]);
 
         Permission::create([
             'slug' => 'log-show',
             'name' => 'Log Show',
-            'action' => 'Show',
+            'action' => 'show',
             'model' => 'log',
         ]);
 
@@ -62,35 +62,35 @@ class PermissionsTableSeeder extends Seeder
         Permission::create([
             'slug' => 'password-change',
             'name' => 'Change Password',
-            'action' => 'Change Password',
+            'action' => 'changePassword',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'password-reset',
             'name' => 'Reset Password',
-            'action' => 'Reset Password',
+            'action' => 'resetPassword',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'group-assign',
             'name' => 'Group Assignment',
-            'action' => 'Assign Group',
+            'action' => 'assignGroup',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'role-assign',
             'name' => 'Role Assignment',
-            'action' => 'Assign Role',
+            'action' => 'assignRole',
             'model' => 'user',
         ]);
 
         Permission::create([
             'slug' => 'permission-assign',
             'name' => 'Permission Assignment',
-            'action' => 'Assign Permission',
+            'action' => 'assignPermission',
             'model' => 'role',
         ]);
     }

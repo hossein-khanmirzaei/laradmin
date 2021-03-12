@@ -10,14 +10,14 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>Menu</h3>
+                        <h3>{{__('menu')}}</h3>
 
-                        <p>Manage Menus, Menu Items, etc.</p>
+                        <p>{{__('manageMenus')}}</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-sitemap"></i>
                     </div>
-                    <a href="{{ route('menus.index') }}" class="small-box-footer">Enter <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('menus.index') }}" class="small-box-footer">{{__('enter')}} <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -25,14 +25,14 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>User</h3>
+                        <h3>{{__('user')}}</h3>
 
-                        <p>Manage Users, Roles, Permissions, etc.</p>
+                        <p>{{__('manageUsers')}}</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <a href="{{ route('users.index') }}" class="small-box-footer">Enter <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('users.index') }}" class="small-box-footer">{{__('enter')}} <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -40,14 +40,14 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>System</h3>
+                        <h3>{{__('system')}}</h3>
 
-                        <p>Manage Logs, System Settings, etc.</p>
+                        <p>{{__('manageLogs')}}</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <a href="{{ route('settings.index') }}" class="small-box-footer">Enter <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('settings.index') }}" class="small-box-footer">{{__('enter')}} <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->

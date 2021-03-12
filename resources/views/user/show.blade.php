@@ -11,7 +11,7 @@
             </div>
 
             <div class="card-body">
-                
+
                 <div class="form-group row">
                     <label for="id" class="col-sm-3 col-form-label text-right">{{ __('user.id') }}</label>
                     <div class="col-sm-9">
@@ -100,7 +100,7 @@
                         @endcan
                         &nbsp;&nbsp;
                         @can('delete', $item)
-                            <a href="{{ route('users.destroy', $item) }}" class="btn btn-danger delete" title="删除" data-toggle="modal" data-target="#dialog" data-whatever="{{ __('Confirm') . __('Delete') }}">
+                            <a href="{{ route('users.destroy', $item) }}" class="btn btn-danger delete" title="{{__('delete')}}" data-toggle="modal" data-target="#dialog" data-whatever="{{ __('Confirm') . __('Delete') }}">
                                 <i class="fas fa-trash"></i> {{ __('Delete') }}
                             </a>
                         @endcan

@@ -1,6 +1,6 @@
 @extends('layouts.screen')
 
-@section('title', '系统关闭')
+@section('title', '{{__('systemShutdown')}}')
 
 @section('content')
 <div class="error-page">
@@ -9,10 +9,10 @@
     </h2>
 
     <div class="error-content">
-        <h3><i class="fas fa-exclamation-triangle text-warning"></i> System is down!</h3>
+        <h3><i class="fas fa-exclamation-triangle text-warning"></i> {{__('systemDown')}}</h3>
 
         <p>
-            please <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">click here</a> Exit system!
+            {{__('please')}} <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{__('clickHere')}}</a> {{__('exitSystem')}}
 
             <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none">
                 @csrf

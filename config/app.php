@@ -80,8 +80,8 @@ return [
     |
     */
 
-    'locale' => 'en',
-
+    'locale' => env('APP_LOCALE','en'),
+    'direction' => env('APP_DIRECTION','ltr'),
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale

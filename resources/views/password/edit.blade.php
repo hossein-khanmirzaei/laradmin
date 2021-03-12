@@ -10,7 +10,7 @@
                     <strong>{{ $message }}</strong>
                 </div>
             @enderror
-            <small class="form-text text-light">Password at least 8 digits</small>
+            <small class="form-text text-light">{{__('passwords.passwordDigit')}}</small>
         </div>
     </div>
     <div class="form-group row">

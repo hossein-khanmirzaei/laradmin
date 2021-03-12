@@ -53,7 +53,6 @@
     "couldNotFindThePage": "We could not find the page you were looking for.",
     "returnToDashboard": "return to dashboard",
     "meanwhileYouMay": "Meanwhile, you may ",
-    "error404": "Meanwhile, you may :link or try using the search form.",
     "trySearchForm": " or try using the search form.",
     "workOnFixing": "We will work on fixing that right away.",
     "contactUS": "Contact Us",
@@ -80,7 +79,5 @@
     "information": "Information",
     "validationError": "Validation Error",
     "dialogTitle": "Dialog title",
-    "loading": "Loading...",
-    "systemShutdown": "System Shutdown",
-    "exitSystemTest": "Please :link to exit system!"
+    "loading": "Loading..."
 }

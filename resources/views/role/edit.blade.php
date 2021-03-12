@@ -44,7 +44,7 @@
                         <div class="col-sm-9">
                             @inject('roles', 'App\Services\RoleService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-info @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-info">
-                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>Nothing</option>
+                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>{{__('nothing')}}</option>
                                 @foreach ($roles->getAll() as $collection)
                                     <option value="{{ $collection->getKey() }}"{{ old('parent_id', $item->parent_id) === $collection->getKey() ? ' selected' : '' }}>{{ $collection->name }}</option>
                                 @endforeach
@@ -62,11 +62,11 @@
                         <div class="col-sm-9">
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="by_group" id="by_group1" class="form-check-input @error('by_group') is-invalid @enderror" value="1"{{ old('by_group', $item->by_group) == 1 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="by_group1">Yes</label>
+                                <label class="form-check-label" for="by_group1">{{__('yes')}}</label>
                             </div>
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="by_group" id="by_group0" class="form-check-input @error('by_group') is-invalid @enderror" value="0"{{ old('by_group', $item->by_group) == 0 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="by_group0">No</label>
+                                <label class="form-check-label" for="by_group0">{{__('no')}}</label>
                             </div>
                             @error('by_group')
                                 <div class="invalid-feedback" role="alert">

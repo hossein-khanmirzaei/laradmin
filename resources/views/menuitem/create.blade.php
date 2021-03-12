@@ -67,7 +67,7 @@
                         <div class="col-sm-9">
                             @inject('menuitems', 'App\Services\MenuitemService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-success @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-success">
-                                <option value="">Nothing</option>
+                                <option value="">{{__('nothing')}}</option>
                                 @foreach ($menuitems->getLevel1Items() as $collection)
                                     <option value="{{ $collection->getKey() }}">{{ $collection->name }}</option>
                                 @endforeach
@@ -114,11 +114,11 @@
                         <div class="col-sm-9">
                             <div class="icheck-success icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable1" class="form-check-input @error('is_enable') is-invalid @enderror" value="1" checked>
-                                <label class="form-check-label" for="is_enable1">Yes</label>
+                                <label class="form-check-label" for="is_enable1">{{__('yes')}}</label>
                             </div>
                             <div class="icheck-success icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable0" class="form-check-input @error('is_enable') is-invalid @enderror" value="0">
-                                <label class="form-check-label" for="is_enable0">No</label>
+                                <label class="form-check-label" for="is_enable0">{{__('no')}}</label>
                             </div>
                             @error('is_enable')
                                 <div class="invalid-feedback" role="alert">

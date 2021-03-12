@@ -90,9 +90,9 @@
         'ordering': true,
         'info': true,
         'autoWidth': true,
-        // 'language': {
-        //     'url': "{{ asset('plugins/datatables/lang/Chinese.json') }}"
-        // }
+        'language': {
+            'url': "{{ config('app.locale') == 'fa' ? asset('plugins/datatables/lang/Farsi.json') : '' }}"
+        }
     });
 </script>
 @endpush

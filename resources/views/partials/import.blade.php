@@ -9,7 +9,7 @@
                     <strong>{{ $errors->first('import') }}</strong>
                 </div>
             @enderror
-            <small class="form-text text-light">Only allowed {{ request('accept') }} format file</small>
+            <small class="form-text text-light">{{__('onlyAllowed') request('accept') __('formatFile')}}</small>
         </div>
     </div>
 </form>

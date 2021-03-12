@@ -55,11 +55,11 @@
                         <div class="col-sm-9">
                             <div class="icheck-success icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable1" class="form-check-input @error('is_enable') is-invalid @enderror" value="1" checked>
-                                <label class="form-check-label" for="is_enable1">Yes</label>
+                                <label class="form-check-label" for="is_enable1">{{__('yes')}}</label>
                             </div>
                             <div class="icheck-success icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable0" class="form-check-input @error('is_enable') is-invalid @enderror" value="0">
-                                <label class="form-check-label" for="is_enable0">No</label>
+                                <label class="form-check-label" for="is_enable0">{{__('no')}}</label>
                             </div>
                             @error('is_enable')
                                 <div class="invalid-feedback" role="alert">

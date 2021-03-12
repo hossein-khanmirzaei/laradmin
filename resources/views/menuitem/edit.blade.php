@@ -68,7 +68,7 @@
                         <div class="col-sm-9">
                             @inject('menuitems', 'App\Services\MenuitemService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-info @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-info">
-                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>Nothing</option>
+                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>{{__('nothing')}}</option>
                                 @foreach ($menuitems->getLevel1Items() as $collection)
                                     <option value="{{ $collection->getKey() }}"{{ old('parent_id', $item->parent_id) === $collection->getKey() ? ' selected' : '' }}>{{ $collection->name }}</option>
                                 @endforeach
@@ -115,11 +115,11 @@
                         <div class="col-sm-9">
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable1" class="form-check-input @error('is_enable') is-invalid @enderror" value="1"{{ old('is_enable', $item->is_enable) == 1 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="is_enable1">Yes</label>
+                                <label class="form-check-label" for="is_enable1">{{__('yes')}}</label>
                             </div>
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable0" class="form-check-input @error('is_enable') is-invalid @enderror" value="0"{{ old('is_enable', $item->is_enable) == 0 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="is_enable0">No</label>
+                                <label class="form-check-label" for="is_enable0">{{__('no')}}</label>
                             </div>
                             @error('is_enable')
                                 <div class="invalid-feedback" role="alert">

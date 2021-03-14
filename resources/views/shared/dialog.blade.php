@@ -11,8 +11,8 @@
                 <p>{{__('loading')}}</p>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-outline-light" id="btn-confirmed">Confirm</button>
+                <button type="button" class="btn btn-outline-light" data-dismiss="modal">{{__('cancel')}}</button>
+                <button type="button" class="btn btn-outline-light" id="btn-confirmed">{{__('confirm')}}</button>
             </div>
         </div>
     </div>

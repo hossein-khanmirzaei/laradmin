@@ -124,7 +124,7 @@
         'info': true,
         'autoWidth': true,
         'language': {
-            'url': "{{ config('app.locale') == 'fa' ? asset('plugins/datatables/lang/Farsi.json') : '' }}"
+            'url': "{{ config('app.locale') == 'en' ? '' : asset('plugins/datatables/lang/' . config('app.locale') . '.json') }}"
         }
     });
 </script>

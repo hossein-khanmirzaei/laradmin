@@ -8,6 +8,6 @@ class MenuPresenter extends Presenter
 {
     public function isEnable()
     {
-        return $this->is_enable ? 'Yes' : 'No';
+        return $this->is_enable ? __('Yes') : __('No');
     }
 }

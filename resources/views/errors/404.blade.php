@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Page not found!')
+@section('title', __('pageNotFound'))
 
 @section('content')
 <div class="error-page">
@@ -11,7 +11,7 @@
 
         <p>
             {{ __('couldNotFindThePage') }}
-            {{ __('meanwhileYouMay') }} <a href="{{ route('home') }}">{{ __('returnToDashboard') }}</a>{{ __('trySearchForm') }}
+            {!! __('returnToDashboardText', ['link' => '<a href="' . route('home') . '">' . __('returnToDashboardLink') . '</a>']) !!}
         </p>
     </div>
     <!-- /.error-content -->

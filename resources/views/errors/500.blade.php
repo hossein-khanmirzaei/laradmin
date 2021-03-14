@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Server Error!')
+@section('title', __('serverError'))
 
 @section('content')
 <div class="error-page">
@@ -11,7 +11,7 @@
 
         <p>
             {{ __('workOnFixing') }}
-            {{ __('meanwhileYouMay') }} <a href="{{ route('home') }}">{{ __('returnToDashboard') }}</a>{{ __('trySearchForm') }}
+            {!! __('returnToDashboardText', ['link' => '<a href="' . route('home') . '">' . __('returnToDashboardLink') . '</a>']) !!}
         </p>
     </div>
 </div>

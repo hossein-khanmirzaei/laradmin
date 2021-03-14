@@ -17,7 +17,7 @@
                     <!-- Login card -->
                     <div class="card">
                         <div class="card-body login-card-body">
-                            <p class="login-box-msg">@yield('title', 'Default Page')</p>
+                            <p class="login-box-msg">@yield('title', __('defaultPage'))</p>
 
                             @yield('content')
                         </div>

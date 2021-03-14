@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard')
+@section('title', __('Dashboard'))
 
 @section('content')
     @if (Auth::user()->is_super)

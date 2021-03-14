@@ -8,12 +8,12 @@ class UserPresenter extends Presenter
 {
     public function isEnable()
     {
-        return $this->is_enable ? 'Yes' : 'No';
+        return $this->is_enable ? __('Yes') : __('No');
     }
 
     public function isSuper()
     {
-        return $this->is_super ? 'Yes' : 'No';
+        return $this->is_super ? __('Yes') : __('No');
     }
 
     public function allRoles()

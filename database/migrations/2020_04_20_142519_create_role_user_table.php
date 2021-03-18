@@ -17,13 +17,11 @@ class CreateRoleUserTable extends Migration
             $table->foreignId('role_id')
                 ->constrained()
                 ->onDelete('cascade')
-                ->onUpdate('cascade')
-                ->comment('角色ID');
+                ->onUpdate('cascade');
             $table->foreignId('user_id')
                 ->constrained()
                 ->onDelete('cascade')
-                ->onUpdate('cascade')
-                ->comment('用户ID');
+                ->onUpdate('cascade');
 
             $table->index(['user_id', 'role_id']);
             $table->unique(['user_id', 'role_id']);

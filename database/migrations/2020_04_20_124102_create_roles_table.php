@@ -15,11 +15,11 @@ class CreateRolesTable extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->string('slug', 20)->unique()->comment('唯一标识');
-            $table->string('name', 50)->unique()->comment('名称');
-            $table->unsignedBigInteger('parent_id')->nullable()->comment('父角色ID');
-            $table->boolean('by_group')->default(false)->comment('是否按分组分配权限，0-否，1-是');
-            $table->text('description')->nullable()->comment('描述');
+            $table->string('slug', 20)->unique();
+            $table->string('name', 50)->unique();
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->boolean('by_group')->default(false);
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

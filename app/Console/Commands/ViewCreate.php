@@ -240,11 +240,11 @@ class ViewCreate extends Command
                     case 'boolean':
                         $attribute .= '<div class="icheck-success icheck-inline">
                                 <input type="radio" name="' . $column . '" id="' . $column . '1" class="form-check-input ' . $error . '" value="1" checked>
-                                <label class="form-check-label" for="' . $column . '1">是</label>
+                                <label class="form-check-label" for="' . $column . '1">{{__(\'Yes\')}}</label>
                             </div>
                             <div class="icheck-success icheck-inline">
                                 <input type="radio" name="' . $column . '" id="' . $column . '0" class="form-check-input ' . $error . '" value="0">
-                                <label class="form-check-label" for="' . $column . '0">否</label>
+                                <label class="form-check-label" for="' . $column . '0">{{__(\'No\'}}</label>
                             </div>';
                         break;
 
@@ -319,11 +319,11 @@ class ViewCreate extends Command
                     case 'boolean':
                         $attribute .= '<div class="icheck-info icheck-inline">
                                 <input type="radio" name="' . $column . '" id="' . $column . '1" class="form-check-input ' . $error . '" value="1"{{ old(\'' . $column . '\', $item->' . $column . ') == 1 ? \' checked\' : \'\' }}>
-                                <label class="form-check-label" for="' . $column . '1">是</label>
+                                <label class="form-check-label" for="' . $column . '1">{{__(\'Yes\')}}</label>
                             </div>
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="' . $column . '" id="' . $column . '0" class="form-check-input ' . $error . '" value="0"{{ old(\'' . $column . '\', $item->' . $column . ') == 0 ? \' checked\' : \'\' }}>
-                                <label class="form-check-label" for="' . $column . '0">否</label>
+                                <label class="form-check-label" for="' . $column . '0">{{__(\'No\')}}</label>
                             </div>';
                         break;
 

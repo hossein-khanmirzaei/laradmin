@@ -12,8 +12,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', '默认页面') | {{ config('setting.name', 'Laravel') }}</title>
-    
+    <title>@yield('title', __('defaultPage')) | {{ config('setting.name', 'Laravel') }}</title>
+
     <!-- App Script -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -31,13 +31,13 @@
     <link href="{{ asset('plugins/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}" rel="stylesheet">
     <!-- Theme style -->
-    <link href="{{ asset('admin-lte/css/adminlte.min.css') }}" rel="stylesheet">
+    <link href="{{ config('app.direction') == 'rtl' ? asset('admin-lte/css/adminlte-rtl.css') : asset('admin-lte/css/adminlte.css')}}" rel="stylesheet">
     <!-- App style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Custom styles -->
     @stack('styles')
 </head>
-<body class="hold-transition @yield('body-class')">
+<body class="hold-transition @yield('body-class')" dir="{{ config('app.direction')}}">
 
     <!-- Site wrapper -->
     <div class="wrapper">

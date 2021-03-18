@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', '服务器错误')
+@section('title', __('serverError'))
 
 @section('content')
 <div class="error-page">
     <h2 class="headline text-danger">500</h2>
 
     <div class="error-content">
-        <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oops! Something went wrong.</h3>
+        <h3><i class="fas fa-exclamation-triangle text-danger"></i>{{ __('somthingWrong') }}</h3>
 
         <p>
-        We will work on fixing that right away.
-        Meanwhile, you may <a href="{{ route('home') }}">return to dashboard</a> or try using the search form.
+            {{ __('workOnFixing') }}
+            {!! __('returnToDashboardText', ['link' => '<a href="' . route('home') . '">' . __('returnToDashboardLink') . '</a>']) !!}
         </p>
     </div>
 </div>

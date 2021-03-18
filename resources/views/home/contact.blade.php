@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', '联系我们')
+@section('title', __('contactUS'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <div class="card-title">联系我们</div>
+                <div class="card-title">{{__('contactUS')}}</div>
             </div>
 
             <div class="card-body">
-                <p>联系我们</p>
+                <p>{{__('contactUS')}}</p>
             </div>
         </div>
     </div>

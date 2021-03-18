@@ -18,7 +18,7 @@ class InternalException extends Exception
         $this->exception = $exception;
         $this->model = $model;
         $this->action = $action;
-        $message = '系统内部错误：' . $this->exception->getMessage();
+        $message = __('auth.internalSystemError') . ': ' . $this->exception->getMessage();
         $code = (int) $this->exception->getCode();
 
         parent::__construct($message, $code);

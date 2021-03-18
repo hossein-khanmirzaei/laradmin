@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', __('Show') . __('permission.module'))
+@section('title', __('Show') . ' ' . __('permission.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('Show') . __('permission.module') }}: {{ $item->getKey() }}</h3>
+                <h3 class="card-title">{{ __('Show') . ' ' . __('permission.module') }}: {{ $item->getKey() }}</h3>
             </div>
 
             <div class="card-body">
-                
+
                 <div class="form-group row">
                     <label for="id" class="col-sm-3 col-form-label text-right">{{ __('permission.id') }}</label>
                     <div class="col-sm-9">

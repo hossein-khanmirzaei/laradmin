@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
-@section('title', __('Edit') . __('permission.module'))
+@section('title', __('Edit') . ' ' . __('permission.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('Edit') . __('permission.module') }}: {{ $item->getKey() }}</h3>
+                <h3 class="card-title">{{ __('Edit') . ' ' . __('permission.module') }}: {{ $item->getKey() }}</h3>
             </div>
 
 		    <form role="form" id="edit-form" name="edit-form" method="post" action="{{ route('permissions.update', $item) }}">
                 @csrf
                 @method('put')
                 <div class="card-body">
-                    
+
                     <div class="form-group row">
                         <label for="slug" class="col-sm-3 col-form-label text-right">{{ __('permission.slug') }}</label>
                         <div class="col-sm-9">
@@ -68,7 +68,7 @@
                         <div class="col-sm-9">
                             @inject('permissions', 'App\Services\PermissionService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-info @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-info">
-                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>无</option>
+                                <option value=""{{ old('parent_id', $item->parent_id) === '' ? ' selected' : '' }}>{{__('nothing')}}</option>
                                 @foreach ($permissions->getAll() as $collection)
                                     <option value="{{ $collection->getKey() }}"{{ old('parent_id', $item->parent_id) === $collection->getKey() ? ' selected' : '' }}>{{ $collection->name }}</option>
                                 @endforeach

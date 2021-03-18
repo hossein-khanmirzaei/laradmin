@@ -15,10 +15,10 @@ class CreateGroupsTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('slug', 20)->unique()->comment('唯一标识');
-            $table->string('name', 50)->unique()->comment('名称');
-            $table->unsignedBigInteger('parent_id')->nullable()->comment('父组ID');
-            $table->text('description')->nullable()->comment('描述');
+            $table->string('slug', 20)->unique();
+            $table->string('name', 50)->unique();
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

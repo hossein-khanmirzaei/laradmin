@@ -13,7 +13,14 @@ return [
     |
     */
 
-    'failed' => '用户名或密码不正确，请重新输入',
-    'throttle' => '登陆失败次数过多，请在 :seconds 秒后重试',
-
+    'failed' => 'These credentials do not match our records.',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'username' => 'Username',
+    'password' => 'Password',
+    'verificationCode' => 'Verification Code',
+    'rememberMe' => 'Remember Me',
+    'login' => 'ورود',
+    'internalSystemError' => 'Internal System Error',
+    'expired' => 'expired',
+    'pleaseTryAgain' => 'Please try again',
 ];

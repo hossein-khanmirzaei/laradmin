@@ -13,10 +13,13 @@ return [
     |
     */
 
-    'password' => '密码至少6个字符且与确认密码一致',
-    'reset' => '密码已重置！',
-    'sent' => '重置密码廉洁已发往您的电子邮箱！',
-    'token' => '密码重置token无效。',
-    'user' => "找不到Email对应的用户。",
+    'reset' => 'Your password has been reset!',
+    'sent' => 'We have emailed your password reset link!',
+    'throttled' => 'Please wait before retrying.',
+    'token' => 'This password reset token is invalid.',
+    'user' => "We can't find a user with that email address.",
+    'changePassword' => "Change Password",
+    'passwordDigit' => "Password at least 8 digits",
+    'confirmChanges' => "Confirm Changes",
 
 ];

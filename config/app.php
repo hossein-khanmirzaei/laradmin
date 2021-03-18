@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'Asia/Shanghai',
+    'timezone' => env('APP_Timezone', 'Asia/Tehran'),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,8 +80,8 @@ return [
     |
     */
 
-    'locale' => 'zh-cn',
-
+    'locale' => env('APP_LOCALE','en'),
+    'direction' => env('LOCALE_DIR','ltr'), //Layout Direction ltr or rtl
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'zh-cn',
+    'fallback_locale' => env('APP_FALLBACK_LOCALE','en'),
 
     /*
     |--------------------------------------------------------------------------
@@ -106,7 +106,7 @@ return [
     |
     */
 
-    'faker_locale' => 'zh_CN',
+    'faker_locale' => env('FAKER_LOCALE', 'en_US'),
 
     /*
     |--------------------------------------------------------------------------

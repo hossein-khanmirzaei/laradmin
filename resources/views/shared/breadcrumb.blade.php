@@ -1,7 +1,7 @@
 <!-- Breadcrumb -->
 <ol class="breadcrumb float-sm-right">
 	<li class="breadcrumb-item">
-		<a href="#">Home</a>
+		<a href="#">{{__('home')}}</a>
 	</li>
-	<li class="breadcrumb-item active">Starter Page</li>
+	<li class="breadcrumb-item active">{{__('homePage')}}</li>
 </ol>

@@ -2,17 +2,17 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content bg-secondary">
             <div class="modal-header">
-                <h5 class="modal-title">Dialog title</h5>
+                <h5 class="modal-title">{{__('dialogTitle')}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p>Loading...</p>
+                <p>{{__('loading')}}</p>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-outline-light" id="btn-confirmed">确定</button>
+                <button type="button" class="btn btn-outline-light" data-dismiss="modal">{{__('cancel')}}</button>
+                <button type="button" class="btn btn-outline-light" id="btn-confirmed">{{__('confirm')}}</button>
             </div>
         </div>
     </div>

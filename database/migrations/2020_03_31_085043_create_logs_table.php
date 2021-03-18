@@ -15,15 +15,15 @@ class CreateLogsTable extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->comment('用户ID');
-            $table->unsignedInteger('ip')->default(0)->comment('IP地址');
-            $table->unsignedInteger('code')->comment('代码');
-            $table->string('path', 128)->comment('路径');
-            $table->string('method', 10)->comment('方法');
-            $table->string('action', 50)->comment('动作');
-            $table->string('model', 50)->comment('模型');
-            $table->string('model_id', 50)->comment('模型ID');
-            $table->text('content')->comment('内容');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedInteger('ip')->default(0);
+            $table->unsignedInteger('code');
+            $table->string('path', 128);
+            $table->string('method', 10);
+            $table->string('action', 50);
+            $table->string('model', 50);
+            $table->string('model_id', 50);
+            $table->text('content');
             $table->timestamps();
 
             $table->index('user_id');

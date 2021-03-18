@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', __('log.module') . __('List'))
+@section('title', __('log.module') . ' ' . __('List'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('log.module') . __('List') }}</h3>
+                <h3 class="card-title">{{ __('log.module') . ' ' . __('List') }}</h3>
             </div>
 
             <div class="card-body">
@@ -77,7 +77,7 @@
         'info': true,
         'autoWidth': true,
         'language': {
-            'url': "{{ asset('plugins/datatables/lang/Chinese.json') }}"
+            'url': "{{ config('app.locale') == 'en' ? '' : asset('plugins/datatables/lang/' . config('app.locale') . '.json') }}"
         }
     });
 </script>

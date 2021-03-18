@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('title', __('Create') . __('permission.module'))
+@section('title', __('Create') . ' ' . __('permission.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('Create') . __('permission.module') }}</h3>
+                <h3 class="card-title">{{ __('Create') . ' ' . __('permission.module') }}</h3>
             </div>
 
 		    <form role="form" id="create-form" name="create-form" method="post" action="{{ route('permissions.store') }}">
                 @csrf
                 <div class="card-body">
-                    
+
                     <div class="form-group row">
                         <label for="slug" class="col-sm-3 col-form-label text-right">{{ __('permission.slug') }}</label>
                         <div class="col-sm-9">
@@ -67,7 +67,7 @@
                         <div class="col-sm-9">
                             @inject('permissions', 'App\Services\PermissionService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-success @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-success">
-                                <option value="">无</option>
+                                <option value="">{{__('nothing')}}</option>
                                 @foreach ($permissions->getAll() as $collection)
                                     <option value="{{ $collection->getKey() }}">{{ $collection->name }}</option>
                                 @endforeach

@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
-@section('title',  __('Edit') . __('menu.module'))
+@section('title',  __('Edit') . ' ' . __('menu.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{  __('Edit') . __('menu.module') }}: {{ $item->getKey() }}</h3>
+                <h3 class="card-title">{{  __('Edit') . ' ' . __('menu.module') }}: {{ $item->getKey() }}</h3>
             </div>
 
 		    <form role="form" id="edit-form" name="edit-form" method="post" action="{{ route('menus.update', $item) }}">
                 @csrf
                 @method('put')
                 <div class="card-body">
-                    
+
                     <div class="form-group row">
                         <label for="slug" class="col-sm-3 col-form-label text-right">{{ __('menu.slug') }}</label>
                         <div class="col-sm-9">
@@ -56,11 +56,11 @@
                         <div class="col-sm-9">
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable1" class="form-check-input @error('is_enable') is-invalid @enderror" value="1"{{ old('is_enable', $item->is_enable) == 1 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="is_enable1">是</label>
+                                <label class="form-check-label" for="is_enable1">{{__('yes')}}</label>
                             </div>
                             <div class="icheck-info icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable0" class="form-check-input @error('is_enable') is-invalid @enderror" value="0"{{ old('is_enable', $item->is_enable) == 0 ? ' checked' : '' }}>
-                                <label class="form-check-label" for="is_enable0">否</label>
+                                <label class="form-check-label" for="is_enable0">{{__('no')}}</label>
                             </div>
                             @error('is_enable')
                                 <div class="invalid-feedback" role="alert">

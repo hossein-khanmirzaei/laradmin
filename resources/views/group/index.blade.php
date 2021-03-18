@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', __('group.module') . __('List'))
+@section('title', __('group.module') . ' ' . __('List'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('group.module') . __('List') }}</h3>
+                <h3 class="card-title">{{ __('group.module') . ' ' . __('List') }}</h3>
                 <div class="card-tools">
                     @can('create', Group::class)
                         <a href="{{ route('groups.create') }}" title="{{ __('Create') }}" class="btn btn-success">
-                            <i class="fas fa-plus"></i> {{ __('Create') . __('group.module') }}
+                            <i class="fas fa-plus"></i> {{ __('Create') . ' ' . __('group.module') }}
                         </a>
                     @endcan
                 </div>
@@ -89,7 +89,7 @@
         'info': true,
         'autoWidth': true,
         'language': {
-            'url': "{{ asset('plugins/datatables/lang/Chinese.json') }}"
+            'url': "{{ config('app.locale') == 'en' ? '' : asset('plugins/datatables/lang/' . config('app.locale') . '.json') }}"
         }
     });
 </script>

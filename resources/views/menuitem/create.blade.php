@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('title', __('Create') . __('menuitem.module'))
+@section('title', __('Create') . ' ' . __('menuitem.module'))
 
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('Create') . __('menuitem.module') }}</h3>
+                <h3 class="card-title">{{ __('Create') . ' ' . __('menuitem.module') }}</h3>
             </div>
 
 		    <form role="form" id="create-form" name="create-form" method="post" action="{{ route('menuitems.store') }}">
                 @csrf
                 <div class="card-body">
-                    
+
                     <div class="form-group row">
                         <label for="slug" class="col-sm-3 col-form-label text-right">{{ __('menuitem.slug') }}</label>
                         <div class="col-sm-9">
@@ -67,7 +67,7 @@
                         <div class="col-sm-9">
                             @inject('menuitems', 'App\Services\MenuitemService')
 							<select name="parent_id" id="parent_id" class="form-control select2 select2-success @error('parent_id') is-invalid @enderror" data-dropdown-css-class="select2-success">
-                                <option value="">无</option>
+                                <option value="">{{__('nothing')}}</option>
                                 @foreach ($menuitems->getLevel1Items() as $collection)
                                     <option value="{{ $collection->getKey() }}">{{ $collection->name }}</option>
                                 @endforeach
@@ -114,11 +114,11 @@
                         <div class="col-sm-9">
                             <div class="icheck-success icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable1" class="form-check-input @error('is_enable') is-invalid @enderror" value="1" checked>
-                                <label class="form-check-label" for="is_enable1">是</label>
+                                <label class="form-check-label" for="is_enable1">{{__('yes')}}</label>
                             </div>
                             <div class="icheck-success icheck-inline">
                                 <input type="radio" name="is_enable" id="is_enable0" class="form-check-input @error('is_enable') is-invalid @enderror" value="0">
-                                <label class="form-check-label" for="is_enable0">否</label>
+                                <label class="form-check-label" for="is_enable0">{{__('no')}}</label>
                             </div>
                             @error('is_enable')
                                 <div class="invalid-feedback" role="alert">

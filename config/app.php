@@ -81,7 +81,18 @@ return [
     */
 
     'locale' => env('APP_LOCALE','en'),
-    'direction' => env('LOCALE_DIR','ltr'), //Layout Direction ltr or rtl
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Layout Direction Configuration
+    |--------------------------------------------------------------------------
+    |
+    | The application layout direction determines the left-to-right or
+    | right-to-left direction of main layout.
+    */
+
+    'direction' => env('LOCALE_DIR','ltr'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale

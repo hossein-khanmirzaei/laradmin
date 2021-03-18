@@ -27,24 +27,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($items as $item)
-                            <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>{{ $item->created_at }}</td>
-								<td>{{ optional($item->user)->username }}</td>
-								<td>{{ $item->ip }}</td>
-								<td>{{ $item->code }}</td>
-								<td>{{ $item->path }}</td>
-								<td>{{ $item->action }}</td>
-								<td>{{ $item->model }}</td>
-								<td>{{ $item->model_id }}</td>
-                                <td>
-                                    <a href="{{ route('logs.show', $item) }}" class="btn btn-primary btn-sm" title="{{ __('Show') }}">
-                                        <i class="fas fa-folder"></i> {{ __('Show') }}
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
                     </tbody>
                     <thead>
                         <tr>
@@ -70,6 +52,62 @@
 @push('scripts')
 <script>
 	$('#logs-table').DataTable({
+        'processing': true,
+        'serverSide': true,
+        'ajax':{
+            'url': "{{ route('paginatedLogs') }}",
+            'dataType': 'json',
+            'type': 'POST',
+            'data': { _token: "{{ csrf_token() }}"},
+        },
+        'columns': [
+            {
+                'data': 'id',
+                'name': 'id'
+             },
+            {
+                'data': 'created_at',
+                'name': 'created_at'
+            },
+            {
+                'data': 'user.username',
+                'name': 'user_id',
+                'defaultContent': '',
+                //'searchable': false
+            },
+            {
+                'data': 'ip',
+                'name': 'ip',
+                //'searchable': false
+            },
+            {
+                'data': 'code',
+                'name': 'code'
+            },
+            {
+                'data': 'path',
+                'name': 'path'
+            },
+            {
+                'data': 'action',
+                'name': 'action'
+            },
+            {
+                'data': 'model',
+                'name': 'model'
+            },
+            {
+                'data': 'model_id',
+                'name': 'model_id'
+            },
+            {
+                'data': 'actionLinks',
+                'name': 'actionLinks',
+                'defaultContent': "",
+                'orderable': false,
+                'searchable': false
+            }
+        ],
         'paging': true,
         'lengthChange': true,
         'searching': true,

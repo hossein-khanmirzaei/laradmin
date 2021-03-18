@@ -4,9 +4,14 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Laracasts\Presenter\PresentableTrait;
 
 class Log extends Model
 {
+    use PresentableTrait;
+
+    protected $presenter = 'App\Presenters\LogPresenter';
+
     /**
      * The attributes that are mass assignable.
      *

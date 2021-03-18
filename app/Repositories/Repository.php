@@ -21,6 +21,30 @@ abstract class Repository
         return $this->model;
     }
 
+    public function count()
+    {
+        return $this->model->count();
+    }
+
+    public function countWithFilter($attributes, $trashed = false)
+    {
+        try {
+            $attributes = is_array($attributes) ? $attributes : [$this->model->getKeyName() => $attributes];
+            $query = $this->model;
+
+            foreach ($attributes as $key => $value) {
+                $query = $query->orWhere($key, 'like', '%' . $value . '%');
+            }
+
+            if ($trashed) {
+                $query = $query->withTrashed();
+            }
+            return $query->count();
+        } catch (QueryException $e) {
+            throw new InternalException($e, $this->getModel(), __FUNCTION__);
+        }
+    }
+
     public function find($id, $trashed = false)
     {
         try {
@@ -45,6 +69,36 @@ abstract class Repository
             }
 
             return $query->get();
+        } catch (QueryException $e) {
+            throw new InternalException($e, $this->getModel(), __FUNCTION__);
+        }
+    }
+
+    public function findAllPaginated($attributes, $relations = null, $order = null, $direction = 'asc', $currentItem = 0, $itemPerPage = 10, $trashed = false)
+    {
+        try {
+            $order = is_null($order) ? $this->model->getKeyName() : $order;
+            $attributes = is_array($attributes) ? $attributes : [$this->model->getKeyName() => $attributes];
+
+            $query = $this->model;
+
+            if (!is_null($relations)) {
+                $relations = is_array($relations) ? $relations : [$relations];
+
+                $query = $query->with($relations);
+            }
+
+            foreach ($attributes as $key => $value) {
+                $query = $query->orWhere($key, 'like', '%' . $value . '%');
+            }
+
+            $query = $query->orderBy($order, $direction);
+
+            if ($trashed) {
+                $query = $query->withTrashed();
+            }
+
+            return $query->skip($currentItem)->take($itemPerPage)->get();
         } catch (QueryException $e) {
             throw new InternalException($e, $this->getModel(), __FUNCTION__);
         }

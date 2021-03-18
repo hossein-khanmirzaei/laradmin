@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Log;
 use App\Services\LogService;
+use Illuminate\Http\Request;
 
 class LogController extends Controller
 {
@@ -43,5 +44,12 @@ class LogController extends Controller
         $item = $this->service->get($log);
 
         return view('log.show', compact('item'));
+    }
+
+    public function getPaginatedLogs(Request $request)
+    {
+        $response = $this->service->getAllPaginated($request);
+
+        echo json_encode($response);
     }
 }

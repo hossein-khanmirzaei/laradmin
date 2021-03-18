@@ -57,4 +57,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('permissions', 'PermissionController');
     Route::resource('groups', 'GroupController');
     // route_here
+    Route::post('/logs', 'LogController@getPaginatedLogs')->name('paginatedLogs');
 });

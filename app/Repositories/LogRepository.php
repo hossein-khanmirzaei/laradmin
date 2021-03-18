@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-use Exception;
 use App\Models\Log;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,6 +11,7 @@ class LogRepository extends Repository
     {
         $this->model = $log;
     }
+
 
     public function write($content, $model, $action, $code)
     {
